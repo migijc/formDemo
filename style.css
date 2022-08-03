@@ -1,0 +1,134 @@
+@import url(./node_modules/@fortawesome/fontawesome-free/css/all.css);
+
+body{
+    background-image: linear-gradient(45deg, rgb(18, 49, 88),rgb(53, 134, 94));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+label{
+    display: inline-block;
+    width: 4.6rem;
+    text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    position: relative;
+    color: #828285;
+}
+
+label::before{
+    content: "*";
+    position: absolute;
+    left: -.6rem;
+    color:red;
+    font-size:1rem;
+
+}
+
+
+form{
+    width: fit-content;
+    border: 8px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    gap:1rem;
+    position: relative;
+    padding-bottom: .5rem;
+    box-shadow: 5px 5px 10px 0px rgb(29, 29, 29);
+
+}
+
+.inputDiv{
+    margin-bottom: .4rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+input{
+    appearance: none;
+    height: 1.5rem;
+    /* outline: 1px solid black; */
+    padding-left: .3rem;
+    border: none;
+    border-bottom: 2.5px solid rgb(131, 160, 149);
+    
+
+}
+
+.formTitle{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    top: .5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #e75792;
+    text-shadow: 2px 2px 2px #666666;
+    font-weight: bold;
+}
+
+#submitButton{
+    border: 2.5px solid #e75792;
+    height: 2.3rem;
+    width: 12rem;
+    background: transparent;
+    border-radius: 90px;
+    font-weight: bold;
+    color: #828285;
+}
+
+.validityStatus{
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    right: -2.5rem;
+}
+
+input:valid + div::after{
+    content: "\f00c";
+    font-family: "Font awesome 6 free";
+    font-weight: 900;
+    color:rgb(102, 224, 102);
+}
+
+/* 
+input:valid::before{
+    content: "LOL";
+    
+    font-size: 10rem;
+} */
+
+
+input:focus-visible{
+    outline: none;
+}
+
+.infoError + div::after{
+    content: "\f00d";
+    font-family: "Font awesome 6 free";
+    font-weight: 900;
+    color:rgb(202, 51, 51);
+}
+
+.invalid:valid + div::after{
+    content: "\f00d";
+    font-family: "Font awesome 6 free";
+    font-weight: 900;
+    color:rgb(202, 51, 51);
+}
+

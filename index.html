@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="get" class="mainForm">
+        <div class="title">
+            <p class="formTitle">Sign up now!</p>
+        </div>
+        <div class="inputDiv emailInput">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <div class="validityStatus"></div>
+        </div>
+        <div class="inputDiv country">
+            <label for="country">country</label>
+            <input type="text" name="country" id="country" required>
+            <div class="validityStatus"></div>
+        </div>
+        <div class="inputDiv zipcode">
+            <label for="zipCode">Zipcode</label>
+            <input type="tel" name="zip" id="zip" required pattern="\d{5}">
+            <div class="validityStatus"></div>
+        </div>
+        <div class="inputDiv password">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required minlength="8" maxlength="16" pattern="[\w]{8,16}">
+            <div class="validityStatus"></div>
+        </div>
+        <div class="inputDiv passwordConfirm">
+            <label for="passwordConfirm">Confirm Password</label>
+            <input type="password" name="passwordConfirm" id="passwordConfirm"required data-confirm-password >
+            <div class="validityStatus"></div>
+        </div>
+        <div class="submitButtonDiv">
+            <button type="button" id="submitButton">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
